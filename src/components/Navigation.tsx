@@ -171,11 +171,11 @@ export default function Navigation() {
               animate="open"
               exit="closed"
               transition={{ duration: 0.4 }}
-              className="fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm"
+              className="fixed inset-0 z-[60] bg-black/30 backdrop-blur-[2px]"
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Panel — neutral dark with clear glass overlay */}
+            {/* Panel — true glassmorphism, transparent, futuristic */}
             <motion.div
               variants={panelVariants}
               initial="closed"
@@ -183,14 +183,15 @@ export default function Navigation() {
               exit="closed"
               className="fixed top-0 left-0 bottom-0 z-[70] w-full max-w-2xl overflow-y-auto no-scrollbar"
               style={{
-                background: "rgba(20, 20, 20, 0.88)",
-                backdropFilter: "blur(30px)",
-                WebkitBackdropFilter: "blur(30px)",
-                borderRight: "1px solid rgba(255, 255, 255, 0.08)",
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(40px) saturate(1.5)",
+                WebkitBackdropFilter: "blur(40px) saturate(1.5)",
+                borderRight: "1px solid rgba(255, 255, 255, 0.12)",
+                boxShadow: "inset 0 0 80px rgba(255, 255, 255, 0.03), 0 0 40px rgba(0, 0, 0, 0.3)",
               }}
             >
               {/* Panel Header */}
-              <div className="flex items-center justify-between px-8 py-6 border-b border-white/5">
+              <div className="flex items-center justify-between px-8 py-6 border-b border-white/10">
                 <Link href="/" onClick={() => setIsOpen(false)}>
                   <Image
                     src="/logo.png"
