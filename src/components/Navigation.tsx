@@ -122,23 +122,8 @@ export default function Navigation() {
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-          {/* Menu Button */}
-          <button
-            onClick={() => setIsOpen(true)}
-            className="flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300 group"
-            aria-label="Open menu"
-          >
-            <Menu className="w-5 h-5 group-hover:scale-110 transition-transform" />
-            <span className="text-sm font-light tracking-[0.2em] uppercase">
-              Menu
-            </span>
-          </button>
-
-          {/* Logo — centered */}
-          <Link
-            href="/"
-            className="absolute left-1/2 -translate-x-1/2"
-          >
+          {/* Logo — left */}
+          <Link href="/">
             <Image
               src="/logo.png"
               alt="A.M. Detailing"
@@ -148,6 +133,18 @@ export default function Navigation() {
               priority
             />
           </Link>
+
+          {/* Menu Button — centered, bigger, prominent */}
+          <button
+            onClick={() => setIsOpen(true)}
+            className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3 px-8 py-3 rounded-full border border-white/15 hover:border-white/30 bg-white/[0.04] hover:bg-white/[0.08] text-white/90 hover:text-white transition-all duration-300 group"
+            aria-label="Open menu"
+          >
+            <Menu className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-base font-light tracking-[0.25em] uppercase">
+              Menu
+            </span>
+          </button>
 
           {/* Right Side — CTA */}
           <Link

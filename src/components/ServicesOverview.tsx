@@ -12,7 +12,7 @@ const services = [
       "Complete interior and exterior transformation — our most comprehensive service.",
     href: "/services#packages",
     image:
-      "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1200&q=80",
+      "https://lh3.googleusercontent.com/p/AF1QipOb630FjtBTM0vuoQybtVXfb4z7IZW1zbKs4vfM=s680-w680-h510-rw",
     featured: true,
   },
   {
@@ -21,7 +21,7 @@ const services = [
       "Hand wash, foam bath, clay bar treatment, and premium drying.",
     href: "/services#exterior",
     image:
-      "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80",
+      "https://lh3.googleusercontent.com/p/AF1QipO0EYEqQbq3xIjgF_V4Y-h8bdFeqaAl1iH-Leor=s680-w680-h510-rw",
   },
   {
     title: "Interior Detail",
@@ -29,7 +29,7 @@ const services = [
       "Deep vacuum, leather conditioning, dashboard care, and restoration.",
     href: "/services#interior",
     image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
+      "https://lh3.googleusercontent.com/p/AF1QipOmBEppexE8R9uxkxc8eqFNjImroUS9Tw-dhbd_=s680-w680-h510-rw",
   },
   {
     title: "Paint Correction",
@@ -37,7 +37,7 @@ const services = [
       "Swirl removal, scratch repair, and multi-stage polish for showroom paint.",
     href: "/services#paint-correction",
     image:
-      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
+      "https://lh3.googleusercontent.com/p/AF1QipPS5LVt4BG11gv72_2iGjNPxdTt6-feP540iiNV=s680-w680-h510-rw",
   },
   {
     title: "Ceramic Coating",
@@ -45,7 +45,7 @@ const services = [
       "Long-lasting paint protection with hydrophobic ceramic sealant.",
     href: "/services#ceramic",
     image:
-      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
+      "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgTmkPBCHLh8-tirzfbHLqL56xlKvs73VT32tPqpuf5cavVF9OttLsERx7HUKGy7mwLv6hFm5SDo2zwFiiORsSrTXtGS_aE2ZxiaTMzorl8JQiGyiiHUbiCScyfK4kG6wI1YJILzGmD_Y=s680-w680-h510-rw",
   },
   {
     title: "Tires & Rims",
@@ -53,7 +53,7 @@ const services = [
       "Deep clean, degrease, and dress your wheels and tires to look new.",
     href: "/services#tires",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://lh3.googleusercontent.com/p/AF1QipPWzhsWKhTpP64tFxwUYJhvWPs98xsR75T5uNkm=s680-w680-h510-rw",
   },
 ];
 
