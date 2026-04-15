@@ -8,64 +8,34 @@ const filters = ["All", "Exterior", "Interior", "Trucks & SUVs", "Specialty"];
 
 const galleryItems = [
   {
-    src: "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&q=80",
-    alt: "Luxury sedan full detail",
+    src: "https://lh3.googleusercontent.com/p/AF1QipOb630FjtBTM0vuoQybtVXfb4z7IZW1zbKs4vfM=s680-w680-h510-rw",
+    alt: "Full detail transformation",
     category: "Exterior",
   },
   {
-    src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
-    alt: "Sports car front detail",
+    src: "https://lh3.googleusercontent.com/p/AF1QipO0EYEqQbq3xIjgF_V4Y-h8bdFeqaAl1iH-Leor=s680-w680-h510-rw",
+    alt: "Exterior wash and shine",
     category: "Exterior",
   },
   {
-    src: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
-    alt: "Classic car paint correction",
-    category: "Exterior",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
-    alt: "Interior leather detail",
+    src: "https://lh3.googleusercontent.com/p/AF1QipOmBEppexE8R9uxkxc8eqFNjImroUS9Tw-dhbd_=s680-w680-h510-rw",
+    alt: "Interior deep clean and detail",
     category: "Interior",
   },
   {
-    src: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80",
-    alt: "Foam wash process",
+    src: "https://lh3.googleusercontent.com/p/AF1QipPS5LVt4BG11gv72_2iGjNPxdTt6-feP540iiNV=s680-w680-h510-rw",
+    alt: "Paint correction and polish",
     category: "Exterior",
   },
   {
-    src: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
-    alt: "Wheel and rim restoration",
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGgTmkPBCHLh8-tirzfbHLqL56xlKvs73VT32tPqpuf5cavVF9OttLsERx7HUKGy7mwLv6hFm5SDo2zwFiiORsSrTXtGS_aE2ZxiaTMzorl8JQiGyiiHUbiCScyfK4kG6wI1YJILzGmD_Y=s680-w680-h510-rw",
+    alt: "Ceramic coating application",
     category: "Specialty",
   },
   {
-    src: "https://images.unsplash.com/photo-1549317661-bd32c8ce0afa?w=800&q=80",
-    alt: "Dark luxury vehicle finish",
-    category: "Exterior",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&q=80",
-    alt: "BMW ceramic coating",
-    category: "Exterior",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80",
-    alt: "Red sports car detail",
-    category: "Exterior",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=800&q=80",
-    alt: "SUV interior deep clean",
-    category: "Interior",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80",
-    alt: "Corvette exterior polish",
-    category: "Exterior",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&q=80",
-    alt: "Truck detail finish",
-    category: "Trucks & SUVs",
+    src: "https://lh3.googleusercontent.com/p/AF1QipPWzhsWKhTpP64tFxwUYJhvWPs98xsR75T5uNkm=s680-w680-h510-rw",
+    alt: "Tire and rim restoration",
+    category: "Specialty",
   },
 ];
 
