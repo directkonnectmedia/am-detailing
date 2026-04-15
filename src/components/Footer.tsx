@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -8,9 +9,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="text-lg font-semibold tracking-[0.3em] uppercase text-white mb-4">
-              A.M. Detailing
-            </h3>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.png"
+                alt="A.M. Detailing"
+                width={60}
+                height={60}
+                className="w-15 h-15"
+              />
+            </Link>
             <p className="text-sm text-white/50 font-light leading-relaxed max-w-xs">
               Premium auto detailing services in Arizona. Your vehicle deserves
               the best treatment. Since 2025.

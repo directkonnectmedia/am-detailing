@@ -2,61 +2,134 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import {
-  Droplets,
-  Car,
-  Sparkles,
-  Shield,
-  CircleDot,
-  Paintbrush,
-} from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 const services = [
   {
-    icon: Droplets,
-    title: "Exterior Wash",
-    description:
-      "Hand wash, foam bath, clay bar treatment, and premium drying for a spotless finish.",
-    href: "/services#exterior",
-  },
-  {
-    icon: Car,
-    title: "Interior Detail",
-    description:
-      "Deep vacuum, leather conditioning, dashboard care, and complete interior restoration.",
-    href: "/services#interior",
-  },
-  {
-    icon: Sparkles,
     title: "Full Detail",
     description:
       "Complete interior and exterior transformation — our most comprehensive service.",
     href: "/services#packages",
+    image:
+      "https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1200&q=80",
+    featured: true,
   },
   {
-    icon: Paintbrush,
+    title: "Exterior Wash",
+    description:
+      "Hand wash, foam bath, clay bar treatment, and premium drying.",
+    href: "/services#exterior",
+    image:
+      "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80",
+  },
+  {
+    title: "Interior Detail",
+    description:
+      "Deep vacuum, leather conditioning, dashboard care, and restoration.",
+    href: "/services#interior",
+    image:
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
+  },
+  {
     title: "Paint Correction",
     description:
-      "Swirl removal, scratch repair, and multi-stage polish for showroom-quality paint.",
+      "Swirl removal, scratch repair, and multi-stage polish for showroom paint.",
     href: "/services#paint-correction",
+    image:
+      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80",
   },
   {
-    icon: Shield,
     title: "Ceramic Coating",
     description:
-      "Long-lasting paint protection with hydrophobic ceramic sealant technology.",
+      "Long-lasting paint protection with hydrophobic ceramic sealant.",
     href: "/services#ceramic",
+    image:
+      "https://images.unsplash.com/photo-1542362567-b07e54358753?w=800&q=80",
   },
   {
-    icon: CircleDot,
     title: "Tires & Rims",
     description:
-      "Deep clean, degrease, and dress your wheels and tires to look brand new.",
+      "Deep clean, degrease, and dress your wheels and tires to look new.",
     href: "/services#tires",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
   },
 ];
 
+function ServiceCard({
+  service,
+  index,
+  featured = false,
+}: {
+  service: (typeof services)[number];
+  index: number;
+  featured?: boolean;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30, scale: 0.97 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{
+        duration: 0.7,
+        ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+        delay: index * 0.1,
+      }}
+      className={featured ? "col-span-1 sm:col-span-2" : ""}
+    >
+      <Link
+        href={service.href}
+        className={`group block relative overflow-hidden rounded-xl ${
+          featured ? "aspect-[16/9] sm:aspect-[21/9]" : "aspect-[3/4]"
+        }`}
+      >
+        {/* Background image */}
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          sizes={featured ? "100vw" : "(max-width: 640px) 100vw, 50vw"}
+          className="object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+
+        {/* Dark gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/70 transition-colors duration-500" />
+
+        {/* Red glow border on hover */}
+        <div className="absolute inset-0 rounded-xl border border-transparent group-hover:border-[var(--color-red)]/30 group-hover:shadow-[inset_0_0_30px_rgba(196,30,58,0.1)] transition-all duration-500" />
+
+        {/* Content — bottom left */}
+        <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+          <h3
+            className={`font-semibold text-white mb-2 tracking-wide ${
+              featured ? "text-2xl sm:text-3xl" : "text-xl"
+            }`}
+          >
+            {service.title}
+          </h3>
+          <p
+            className={`text-white/50 font-light leading-relaxed mb-3 ${
+              featured ? "text-base max-w-lg" : "text-sm"
+            }`}
+          >
+            {service.description}
+          </p>
+          <div className="flex items-center gap-2 text-[var(--color-red)] opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+            <span className="text-sm font-medium tracking-wider uppercase">
+              Learn More
+            </span>
+            <ArrowRight className="w-4 h-4" />
+          </div>
+        </div>
+      </Link>
+    </motion.div>
+  );
+}
+
 export default function ServicesOverview() {
+  const [featured, ...rest] = services;
+
   return (
     <section className="relative py-[var(--section-padding)] px-6">
       <div className="mx-auto max-w-7xl">
@@ -65,7 +138,10 @@ export default function ServicesOverview() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+          }}
           className="text-center mb-16"
         >
           <p className="text-xs font-light tracking-[0.4em] uppercase text-[var(--color-red)] mb-4">
@@ -80,33 +156,13 @@ export default function ServicesOverview() {
           </p>
         </motion.div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.6,
-                ease: [0.16, 1, 0.3, 1],
-                delay: i * 0.1,
-              }}
-            >
-              <Link
-                href={service.href}
-                className="group block p-8 rounded-xl border border-white/5 hover:border-white/10 bg-[var(--color-charcoal-light)]/50 hover:bg-[var(--color-charcoal-light)] transition-all duration-500"
-              >
-                <service.icon className="w-8 h-8 text-[var(--color-red)] mb-5 group-hover:scale-110 transition-transform duration-300" />
-                <h3 className="text-lg font-medium text-white mb-2 tracking-wide">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-white/40 font-light leading-relaxed">
-                  {service.description}
-                </p>
-              </Link>
-            </motion.div>
+        {/* Featured card — full width */}
+        <ServiceCard service={featured} index={0} featured />
+
+        {/* Remaining cards — 2 column grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          {rest.map((service, i) => (
+            <ServiceCard key={service.title} service={service} index={i + 1} />
           ))}
         </div>
 

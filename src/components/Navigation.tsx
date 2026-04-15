@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const serviceCategories = [
   {
@@ -82,7 +83,10 @@ const itemVariants = {
   open: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+    transition: {
+      duration: 0.4,
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
+    },
   },
 };
 
@@ -111,12 +115,10 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Top Nav Bar — Glassmorphism, transparent, floating */}
+      {/* Top Nav Bar — Always subtle clear glass, stronger on scroll with red accent */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "glass shadow-lg"
-            : "bg-transparent"
+          scrolled ? "glass-nav-scrolled shadow-lg" : "glass-nav"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
@@ -132,11 +134,19 @@ export default function Navigation() {
             </span>
           </button>
 
-          {/* Logo */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2">
-            <span className="text-lg font-semibold tracking-[0.3em] uppercase text-white">
-              A.M. Detailing
-            </span>
+          {/* Logo — centered */}
+          <Link
+            href="/"
+            className="absolute left-1/2 -translate-x-1/2"
+          >
+            <Image
+              src="/logo.png"
+              alt="A.M. Detailing"
+              width={50}
+              height={50}
+              className="w-10 h-10 sm:w-12 sm:h-12"
+              priority
+            />
           </Link>
 
           {/* Right Side — CTA */}
@@ -150,7 +160,7 @@ export default function Navigation() {
         </div>
       </header>
 
-      {/* Side Panel — Rolls Royce glassmorphism + Rivian content */}
+      {/* Side Panel — Clear glassmorphism + Rivian content */}
       <AnimatePresence>
         {isOpen && (
           <>
@@ -165,25 +175,31 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Panel */}
+            {/* Panel — neutral dark with clear glass overlay */}
             <motion.div
               variants={panelVariants}
               initial="closed"
               animate="open"
               exit="closed"
-              className="fixed top-0 left-0 bottom-0 z-[70] w-full max-w-2xl glass overflow-y-auto no-scrollbar"
+              className="fixed top-0 left-0 bottom-0 z-[70] w-full max-w-2xl overflow-y-auto no-scrollbar"
               style={{
-                background: "rgba(16, 16, 30, 0.85)",
+                background: "rgba(20, 20, 20, 0.88)",
                 backdropFilter: "blur(30px)",
                 WebkitBackdropFilter: "blur(30px)",
-                borderRight: "1px solid rgba(240, 240, 245, 0.06)",
+                borderRight: "1px solid rgba(255, 255, 255, 0.08)",
               }}
             >
               {/* Panel Header */}
               <div className="flex items-center justify-between px-8 py-6 border-b border-white/5">
-                <span className="text-lg font-semibold tracking-[0.3em] uppercase text-white">
-                  A.M. Detailing
-                </span>
+                <Link href="/" onClick={() => setIsOpen(false)}>
+                  <Image
+                    src="/logo.png"
+                    alt="A.M. Detailing"
+                    width={44}
+                    height={44}
+                    className="w-11 h-11"
+                  />
+                </Link>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="flex items-center gap-2 text-white/60 hover:text-white transition-colors"
@@ -241,7 +257,12 @@ export default function Navigation() {
                       transition={{
                         delay: 0.6 + i * 0.1,
                         duration: 0.5,
-                        ease: [0.16, 1, 0.3, 1],
+                        ease: [0.16, 1, 0.3, 1] as [
+                          number,
+                          number,
+                          number,
+                          number,
+                        ],
                       }}
                     >
                       <Link
