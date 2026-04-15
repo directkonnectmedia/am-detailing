@@ -37,6 +37,36 @@ const galleryItems = [
     alt: "Tire and rim restoration",
     category: "Specialty",
   },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEf0oOLU4TADy0XMU_mL96mTID9DZF4cNZR_5fAPo-Zb6kSsJLUkrRbBnRI7PNaJldD_2jRrV-eJJAp0l87qsofM7KJuAcIaDc0Yv4esEY0wdxcH3R4hvWrt0MLZkxfZgGprvehr6zrq6s7=s680-w680-h510-rw",
+    alt: "Exterior detail finish",
+    category: "Exterior",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPOWex5Q4F6MQnDyggiGX_Mx0_4USn7ophOLhUtRSnC6mLkffzsujSRSlYd5NkFMmcWVfhJD4s_L46NQTBAFJhaXB5kCMaxC-48Qbgk6UdnqRTmFFsrUG86pi8LD_p0mJH9YPXyrbavh-b=s680-w680-h510-rw",
+    alt: "Vehicle showcase",
+    category: "Exterior",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEAryobQHLoV_5Mg3HqBBzV7k0o8ytlPbDrsrn1tArjVCDUcPzQwljp080JVV-d91Zbtq0hzE8OjMrg1Lt7zW5tSlLPduhrP4ebIgm6LZi4TVo8aWjLVLlPYKTCxfaGBEYCI3Lm748lwzAo=s680-w680-h510-rw",
+    alt: "Premium exterior care",
+    category: "Exterior",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAG_mpFumBeFxebl9tvJ8i_ljTotpQi35774s0vWdn72i6GZoEo9F_-3W4z1CUfVXEUVjvqW-9edbvjW2nutNH144tIMI5ZEGh5CkFjorU8WCqHrr_3a4AFv8DghsQYPFCgDCGHZa9kRdRE=s680-w680-h510-rw",
+    alt: "Full vehicle restoration",
+    category: "Exterior",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAGFNwDkmtaMQYE7HVaAnkndHRKw1uLAqv090EKi3362jP6BgbLXYSs3vfSr84ZDTO76hp2phSR0PKOq-Z4SRkSdqAZZlwbvW2A9pRC1-P8cfIWA97zxjHZjkQ8LncVQNIGeuU-CAeyhtPLq=s680-w680-h510-rw",
+    alt: "Detailed truck finish",
+    category: "Trucks & SUVs",
+  },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAH95o7ae8cxtJE-ZTcnQvovcbJ3Id8OumA8m1_Y7NJyvpv6emoohtO4i23T-pfh6bnWc99fAtOFCgnb6Xmny7oDYrFFnw-kdhIP5iFwH0CRZMLoAAoWfDZhvJnVtRd8qj8lxdt9hYLwdUvG=s680-w680-h510-rw",
+    alt: "SUV exterior detail",
+    category: "Trucks & SUVs",
+  },
 ];
 
 export default function GalleryPage() {

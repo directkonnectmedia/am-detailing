@@ -36,6 +36,16 @@ const galleryItems = [
     alt: "Tire and rim restoration",
     span: false,
   },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEf0oOLU4TADy0XMU_mL96mTID9DZF4cNZR_5fAPo-Zb6kSsJLUkrRbBnRI7PNaJldD_2jRrV-eJJAp0l87qsofM7KJuAcIaDc0Yv4esEY0wdxcH3R4hvWrt0MLZkxfZgGprvehr6zrq6s7=s680-w680-h510-rw",
+    alt: "Exterior detail finish",
+    span: true,
+  },
+  {
+    src: "https://lh3.googleusercontent.com/gps-cs-s/APNQkAEPOWex5Q4F6MQnDyggiGX_Mx0_4USn7ophOLhUtRSnC6mLkffzsujSRSlYd5NkFMmcWVfhJD4s_L46NQTBAFJhaXB5kCMaxC-48Qbgk6UdnqRTmFFsrUG86pi8LD_p0mJH9YPXyrbavh-b=s680-w680-h510-rw",
+    alt: "Vehicle showcase",
+    span: false,
+  },
 ];
 
 export default function GalleryPreview() {
